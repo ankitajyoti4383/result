@@ -1,0 +1,121 @@
+/* src/navbar.css */
+/* Navbar Styling */
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #34495e;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo-image {
+  width: 40px;
+  height: auto;
+  margin-right: 0.8rem;
+}
+
+.navbar__title {
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar__links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.navbar__links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar__links a:hover {
+  color: #1abc9c;
+}
+
+.navbar__links a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1abc9c;
+  transition: width 0.3s ease;
+}
+
+.navbar__links a:hover::after {
+  width: 100%;
+}
+
+.navbar__admin {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__admin-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar__admin-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+}
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #ecf0f1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.dropdown-item {
+  padding: 10px;
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+/* Close dropdown on click outside */
+@media (max-width: 768px) {
+  .navbar__links {
+    display: none;
+  }
+}
